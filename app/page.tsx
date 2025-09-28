@@ -7,20 +7,46 @@ import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
 import Squares from "./components/Squares/Squares";
 import SplashCursor from "./components/SplashCursor/SplashCursor";
 import ElectricBorder from "./components/ElectricBorder/ElectricBorder";
+import CircularText from "./components/CircularText/CircularText";
+import LogoLoop from "./components/LogoLoop/LogoLoop";
+import {
+  DiVisualstudio,
+  DiPhp,
+  DiHtml5,
+  DiCss3,
+  DiLaravel,
+  DiMysql,
+  DiJsBadge,
+  DiReact,
+} from "react-icons/di";
+import Particles from "./components/Particles/Particles";
+// Alternative with image sources
+
+const techLogos = [
+  { node: <DiVisualstudio />, title: "React", href: "https://react.dev" },
+  { node: <DiHtml5 />, title: "React", href: "https://react.dev" },
+  { node: <DiCss3 />, title: "React", href: "https://react.dev" },
+  { node: <DiPhp />, title: "React", href: "https://react.dev" },
+  { node: <DiJsBadge />, title: "React", href: "https://react.dev" },
+  { node: <DiLaravel />, title: "React", href: "https://react.dev" },
+  { node: <DiMysql />, title: "React", href: "https://react.dev" },
+  { node: <DiReact />, title: "React", href: "https://react.dev" },
+];
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden bg-black">
       <SplashCursor />
       <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full">
         <Squares
           speed={0.5}
           squareSize={40}
           direction="diagonal" // up, down, left, right, diagonal
-          borderColor="#944A00"
+          borderColor="rgba(255, 255, 255, 0.25)"
           hoverFillColor="#222"
         />
       </div>
+      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-black"></div>
       <div className="container mx-auto h-screen">
         <div className="grid grid-cols-12">
           <div className="col-span-6">
@@ -51,14 +77,14 @@ export default function Home() {
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
                       exit={{ y: "-120%" }}
-                      staggerDuration={0.025}
+                      staggerDuration={0.05}
                       splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
                       transition={{
                         type: "spring",
                         damping: 30,
                         stiffness: 400,
                       }}
-                      rotationInterval={2000}
+                      rotationInterval={3000}
                     />
                   </div>
                 </AnimatedContent>
@@ -97,8 +123,8 @@ export default function Home() {
                   direction="top"
                   className="text-xl mb-8"
                 />
-                <div className="flex gap-4">
-                  <div className="w-fit">
+                <div className="flex gap-6">
+                  <div className="w-fit group transition-transform duration-500 hover:scale-110">
                     <ElectricBorder
                       color="#ff8000"
                       speed={1}
@@ -106,12 +132,17 @@ export default function Home() {
                       thickness={2}
                       style={{ borderRadius: 16 }}
                     >
-                      <div className="px-6 py-3">
-                        <p>Download CV</p>
+                      <div
+                        className="px-6 py-3 rounded-[16px] transition-colors duration-300
+                 group-hover:bg-orange-500/20 group-hover:cursor-pointer"
+                      >
+                        <p className="transition-colors duration-300 group-hover:text-white">
+                          Download CV
+                        </p>
                       </div>
                     </ElectricBorder>
                   </div>
-                  <div className="w-fit">
+                  <div className="w-fit group transition-transform duration-500 hover:scale-115">
                     <ElectricBorder
                       color="#008080"
                       speed={1}
@@ -119,8 +150,13 @@ export default function Home() {
                       thickness={2}
                       style={{ borderRadius: 16 }}
                     >
-                      <div className="px-6 py-3">
-                        <p>Visit LinkedIn</p>
+                      <div
+                        className="px-6 py-3 rounded-[16px] transition-colors duration-300
+                 group-hover:bg-cyan-500/20 group-hover:cursor-pointer"
+                      >
+                        <p className="transition-colors duration-300 group-hover:text-white">
+                          Visit LinkedIn
+                        </p>
                       </div>
                     </ElectricBorder>
                   </div>
@@ -132,6 +168,61 @@ export default function Home() {
             <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
           </div>
         </div>
+      </div>
+      <div className="absolute w-full h-[60vh] ">
+        <Particles
+          particleColors={["#9E9E9E", "#9E9E9E"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+        <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-black"></div>
+      </div>
+      <div className="container mx-auto py-16">
+        <div className="flex flex-col mt-6 ">
+          <h1 className="text-6xl text-white font-bold text-center z-50">
+            <span className="text-orange-400">Tech</span> Stack
+          </h1>
+          <div
+            style={{
+              height: "200px",
+              position: "relative",
+              overflow: "hidden",
+              marginTop: "60px",
+            }}
+          >
+            <LogoLoop
+              logos={techLogos}
+              speed={150}
+              direction="left"
+              logoHeight={100}
+              gap={60}
+              pauseOnHover
+              scaleOnHover
+              fadeOut
+              ariaLabel="Technology partners"
+            />
+          </div>
+          <p className="text-xl text-center text-white">
+            Tools & technologies that i'm still learning and mastery to build
+            future projects
+          </p>
+        </div>
+      </div>
+      <div className="absolute w-full h-full">
+        <div className="absolute w-full h-40 bg-gradient-to-t from-transparent to-black"></div>
+        <Squares
+          speed={0.5}
+          squareSize={40}
+          direction="diagonal" // up, down, left, right, diagonal
+          borderColor="rgba(255, 255, 255, 0.25)"
+          hoverFillColor="#222"
+        />
+        <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-black"></div>
       </div>
     </div>
   );
