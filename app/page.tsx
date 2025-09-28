@@ -7,7 +7,6 @@ import AnimatedContent from "./components/AnimatedContent/AnimatedContent";
 import Squares from "./components/Squares/Squares";
 import SplashCursor from "./components/SplashCursor/SplashCursor";
 import ElectricBorder from "./components/ElectricBorder/ElectricBorder";
-import CircularText from "./components/CircularText/CircularText";
 import LogoLoop from "./components/LogoLoop/LogoLoop";
 import {
   DiVisualstudio,
@@ -20,6 +19,8 @@ import {
   DiReact,
 } from "react-icons/di";
 import Particles from "./components/Particles/Particles";
+import CardSwap, { Card } from "./components/CardSwap/CardSwap";
+import { FaGithub } from "react-icons/fa";
 // Alternative with image sources
 
 const techLogos = [
@@ -42,11 +43,11 @@ export default function Home() {
           speed={0.5}
           squareSize={40}
           direction="diagonal" // up, down, left, right, diagonal
-          borderColor="rgba(255, 255, 255, 0.25)"
+          borderColor="rgba(255, 255, 255, 0.05)"
           hoverFillColor="#222"
         />
+        <div className="absolute bottom-0 w-full h-80 bg-gradient-to-b from-transparent to-black"></div>
       </div>
-      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-black"></div>
       <div className="container mx-auto h-screen">
         <div className="grid grid-cols-12">
           <div className="col-span-6">
@@ -169,7 +170,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="absolute w-full h-[60vh] ">
+      <div className="absolute w-full h-[60vh] mt-6 ">
         <Particles
           particleColors={["#9E9E9E", "#9E9E9E"]}
           particleCount={200}
@@ -180,9 +181,9 @@ export default function Home() {
           alphaParticles={false}
           disableRotation={false}
         />
-        <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-black"></div>
+        <div className="absolute bottom-0 w-full h-60 bg-gradient-to-b from-transparent to-black"></div>
       </div>
-      <div className="container mx-auto py-16">
+      <div className="container mx-auto py-30">
         <div className="flex flex-col mt-6 ">
           <h1 className="text-6xl text-white font-bold text-center z-50">
             <span className="text-orange-400">Tech</span> Stack
@@ -204,6 +205,7 @@ export default function Home() {
               pauseOnHover
               scaleOnHover
               fadeOut
+              fadeOutColor="#000"
               ariaLabel="Technology partners"
             />
           </div>
@@ -214,15 +216,159 @@ export default function Home() {
         </div>
       </div>
       <div className="absolute w-full h-full">
-        <div className="absolute w-full h-40 bg-gradient-to-t from-transparent to-black"></div>
+        <div className="absolute w-full h-60 bg-gradient-to-t from-transparent to-black"></div>
         <Squares
           speed={0.5}
           squareSize={40}
           direction="diagonal" // up, down, left, right, diagonal
-          borderColor="rgba(255, 255, 255, 0.25)"
+          borderColor="rgba(255, 255, 255, 0.05)"
           hoverFillColor="#222"
         />
-        <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-black"></div>
+        <div className="absolute bottom-0 w-full h-80 bg-gradient-to-b from-transparent to-black"></div>
+      </div>
+      <div className="container mx-auto h-screen">
+        <div className="grid grid-cols-12">
+          <div className="col-span-6">
+            <div className="flex items-center h-full">
+              <div className="flex flex-col gap-6 items-start">
+                <SplitText
+                  text="Some of my projects that i have done"
+                  className="text-6xl font-bold text-start"
+                  delay={50}
+                  duration={0.6}
+                  ease="power3.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="-100px"
+                  textAlign="start"
+                />
+                <SplitText
+                  text="check out the repo!"
+                  className="text-3xl text-start text-gray-500"
+                  delay={100}
+                  duration={0.6}
+                  ease="power3.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
+                  rootMargin="-100px"
+                  textAlign="center"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-6">
+            <div style={{ height: "600px", position: "relative" }}>
+              <CardSwap
+                cardDistance={60}
+                verticalDistance={80}
+                delay={3000}
+                pauseOnHover={false}
+              >
+                <Card className="flex flex-col items-start gap-4 border-4 bg-black">
+                  <div className="flex items-center justify-between w-full px-4 ">
+                    <h3 className="text-xl text-white font-bold ms-4 mt-4">
+                      Apple Website
+                    </h3>
+                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                  </div>
+                  <img
+                    src="/apple.jpg"
+                    alt="Apple Website"
+                    className="w-full h-full object-cover"
+                  />
+                </Card>
+                <Card className="flex flex-col items-start gap-4 border-4 bg-black">
+                  <div className="flex items-center justify-between w-full px-4 ">
+                    <h3 className="text-xl text-white font-bold ms-4 mt-4">
+                      Nvidia Website
+                    </h3>
+                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                  </div>
+                  <img
+                    src="/nvidia.jpg"
+                    alt="Apple Website"
+                    className="w-full h-full object-cover"
+                  />
+                </Card>
+                <Card className="flex flex-col items-start gap-4 border-4 bg-black">
+                  <div className="flex items-center justify-between w-full px-4 ">
+                    <h3 className="text-xl text-white font-bold ms-4 mt-4">
+                      Intel Website
+                    </h3>
+                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                  </div>
+                  <img
+                    src="/intel.jpg"
+                    alt="Apple Website"
+                    className="w-full h-full object-cover"
+                  />
+                </Card>
+                <Card className="flex flex-col items-start gap-4 border-4 bg-black">
+                  <div className="flex items-center justify-between w-full px-4 ">
+                    <h3 className="text-xl text-white font-bold ms-4 mt-4">
+                      Amazon Website
+                    </h3>
+                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                  </div>
+                  <img
+                    src="/amazon.jpg"
+                    alt="Apple Website"
+                    className="w-full h-full object-cover"
+                  />
+                </Card>
+              </CardSwap>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute w-full h-[60vh] mt-6 ">
+        <Particles
+          particleColors={["#9E9E9E", "#9E9E9E"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+        <div className="absolute bottom-0 w-full h-60 bg-gradient-to-b from-transparent to-black"></div>
+      </div>
+      <div className="container mx-auto py-60">
+        <div className="flex flex-col mt-6 ">
+          <h1 className="text-6xl text-white font-bold text-center z-50">
+            <span className="text-orange-400">Tech</span> Stack
+          </h1>
+          <div
+            style={{
+              height: "200px",
+              position: "relative",
+              overflow: "hidden",
+              marginTop: "60px",
+            }}
+          >
+            <LogoLoop
+              logos={techLogos}
+              speed={150}
+              direction="left"
+              logoHeight={100}
+              gap={60}
+              pauseOnHover
+              scaleOnHover
+              fadeOut
+              fadeOutColor="#000"
+              ariaLabel="Technology partners"
+            />
+          </div>
+          <p className="text-xl text-center text-white">
+            Tools & technologies that i'm still learning and mastery to build
+            future projects
+          </p>
+        </div>
       </div>
     </div>
   );
