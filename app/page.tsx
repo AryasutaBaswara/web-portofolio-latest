@@ -9,7 +9,6 @@ import SplashCursor from "./components/SplashCursor/SplashCursor";
 import ElectricBorder from "./components/ElectricBorder/ElectricBorder";
 import LogoLoop from "./components/LogoLoop/LogoLoop";
 import {
-  DiVisualstudio,
   DiPhp,
   DiHtml5,
   DiCss3,
@@ -18,20 +17,24 @@ import {
   DiJsBadge,
   DiReact,
 } from "react-icons/di";
+import { SiNextdotjs } from "react-icons/si";
 import Particles from "./components/Particles/Particles";
 import CardSwap, { Card } from "./components/CardSwap/CardSwap";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+import TiltedCard from "./components/TiltedCard/TiltedCard";
+
 // Alternative with image sources
 
 const techLogos = [
-  { node: <DiVisualstudio />, title: "React", href: "https://react.dev" },
   { node: <DiHtml5 />, title: "React", href: "https://react.dev" },
   { node: <DiCss3 />, title: "React", href: "https://react.dev" },
+  { node: <DiLaravel />, title: "React", href: "https://react.dev" },
   { node: <DiPhp />, title: "React", href: "https://react.dev" },
   { node: <DiJsBadge />, title: "React", href: "https://react.dev" },
-  { node: <DiLaravel />, title: "React", href: "https://react.dev" },
-  { node: <DiMysql />, title: "React", href: "https://react.dev" },
   { node: <DiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiNextdotjs />, title: "React", href: "https://react.dev" },
+  { node: <DiMysql />, title: "React", href: "https://react.dev" },
 ];
 
 export default function Home() {
@@ -43,7 +46,7 @@ export default function Home() {
           speed={0.5}
           squareSize={40}
           direction="diagonal" // up, down, left, right, diagonal
-          borderColor="rgba(255, 255, 255, 0.05)"
+          borderColor="rgba(255, 255, 255, 0.1)"
           hoverFillColor="#222"
         />
         <div className="absolute bottom-0 w-full h-80 bg-gradient-to-b from-transparent to-black"></div>
@@ -101,7 +104,7 @@ export default function Home() {
                     to={{ opacity: 1, y: 0 }}
                     threshold={0.1}
                     rootMargin="-100px"
-                    textAlign="center"
+                    textAlign="start"
                   />
                   <SplitText
                     text="Student and Developer"
@@ -114,7 +117,7 @@ export default function Home() {
                     to={{ opacity: 1, y: 0 }}
                     threshold={0.1}
                     rootMargin="-100px"
-                    textAlign="center"
+                    textAlign="start"
                   />
                 </div>
                 <BlurText
@@ -170,7 +173,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="absolute w-full h-[60vh] mt-6 ">
+      <div className="absolute w-full h-full mt-6 ">
         <Particles
           particleColors={["#9E9E9E", "#9E9E9E"]}
           particleCount={200}
@@ -183,7 +186,7 @@ export default function Home() {
         />
         <div className="absolute bottom-0 w-full h-60 bg-gradient-to-b from-transparent to-black"></div>
       </div>
-      <div className="container mx-auto py-30">
+      <div className="container mx-auto py-60 mb-6">
         <div className="flex flex-col mt-6 ">
           <h1 className="text-6xl text-white font-bold text-center z-50">
             <span className="text-orange-400">Tech</span> Stack
@@ -209,19 +212,19 @@ export default function Home() {
               ariaLabel="Technology partners"
             />
           </div>
-          <p className="text-xl text-center text-white">
+          <p className="text-xl text-center text-gray-500">
             Tools & technologies that i'm still learning and mastery to build
             future projects
           </p>
         </div>
       </div>
-      <div className="absolute w-full h-full">
+      <div className="absolute w-full h-full mt-6">
         <div className="absolute w-full h-60 bg-gradient-to-t from-transparent to-black"></div>
         <Squares
           speed={0.5}
           squareSize={40}
           direction="diagonal" // up, down, left, right, diagonal
-          borderColor="rgba(255, 255, 255, 0.05)"
+          borderColor="rgba(255, 255, 255, 0.1)"
           hoverFillColor="#222"
         />
         <div className="absolute bottom-0 w-full h-80 bg-gradient-to-b from-transparent to-black"></div>
@@ -325,7 +328,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="absolute w-full h-[60vh] mt-6 ">
+      <div className="absolute w-full h-full mt-6 ">
         <Particles
           particleColors={["#9E9E9E", "#9E9E9E"]}
           particleCount={200}
@@ -338,36 +341,65 @@ export default function Home() {
         />
         <div className="absolute bottom-0 w-full h-60 bg-gradient-to-b from-transparent to-black"></div>
       </div>
-      <div className="container mx-auto py-60">
-        <div className="flex flex-col mt-6 ">
+      <div className="container mx-auto">
+        <div className="flex flex-col gap-6 items-center mt-6">
           <h1 className="text-6xl text-white font-bold text-center z-50">
-            <span className="text-orange-400">Tech</span> Stack
+            My <span className="text-orange-400">Certificates</span>
           </h1>
-          <div
-            style={{
-              height: "200px",
-              position: "relative",
-              overflow: "hidden",
-              marginTop: "60px",
-            }}
-          >
-            <LogoLoop
-              logos={techLogos}
-              speed={150}
-              direction="left"
-              logoHeight={100}
-              gap={60}
-              pauseOnHover
-              scaleOnHover
-              fadeOut
-              fadeOutColor="#000"
-              ariaLabel="Technology partners"
+          <div className="flex mt-[60px] gap-[60px] relative">
+            <TiltedCard
+              imageSrc="/freeCodeCamp-RWD.jpg"
+              altText="Kendrick Lamar - GNX Album Cover"
+              containerHeight="300px"
+              containerWidth="400px"
+              imageHeight="300px"
+              imageWidth="400px"
+              rotateAmplitude={12}
+              scaleOnHover={1.1}
+            />
+            <TiltedCard
+              imageSrc="/Udemy-js.jpg"
+              altText="Kendrick Lamar - GNX Album Cover"
+              containerHeight="300px"
+              containerWidth="400px"
+              imageHeight="300px"
+              imageWidth="400px"
+              rotateAmplitude={12}
+              scaleOnHover={1.1}
+            />
+            <TiltedCard
+              imageSrc="/BWA-mern.jpg"
+              altText="Kendrick Lamar - GNX Album Cover"
+              containerHeight="300px"
+              containerWidth="400px"
+              imageHeight="300px"
+              imageWidth="400px"
+              rotateAmplitude={12}
+              scaleOnHover={1.1}
             />
           </div>
-          <p className="text-xl text-center text-white">
-            Tools & technologies that i'm still learning and mastery to build
-            future projects
-          </p>
+
+          <BlurText
+            text="Just a few certificates I’ve collected while learning and exploring. Nothing too fancy, but they show the areas I’ve been focusing on recently."
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="text-xl mt-8 text-gray-500"
+          />
+        </div>
+      </div>
+      <div className="absolute w-full mt-4"></div>
+      <div className="container mx-auto py-25 bg-transparent relative z-20">
+        <div className="flex flex-col mt-6 gap-6 items-center justify-center ">
+          <h1 className="text-6xl text-white font-bold text-center z-50">
+            <span className="text-orange-400">Contact</span> Me
+          </h1>
+          <div className="flex gap-[60px] items-center mt-6">
+            <FaInstagram className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            <FaWhatsapp className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            <BiLogoGmail className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            <FaLinkedin className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+          </div>
         </div>
       </div>
     </div>
