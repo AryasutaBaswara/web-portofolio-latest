@@ -281,52 +281,45 @@ export default function Home() {
                 <Card className="flex flex-col items-start gap-4 border-4 bg-black">
                   <div className="flex items-center justify-between w-full px-4 ">
                     <h3 className="text-xl text-white font-bold ms-4 mt-4">
-                      Apple Website
+                      Web Blog WPU
                     </h3>
-                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                    <a href="https://github.com/AryasutaBaswara/wpublog-laravel">
+                      <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                    </a>
                   </div>
                   <img
-                    src="/apple.jpg"
-                    alt="Apple Website"
+                    src="/WPU-blog.jpg"
+                    alt="WPU Blog"
                     className="w-full h-full object-cover"
                   />
                 </Card>
                 <Card className="flex flex-col items-start gap-4 border-4 bg-black">
                   <div className="flex items-center justify-between w-full px-4 ">
                     <h3 className="text-xl text-white font-bold ms-4 mt-4">
-                      Nvidia Website
+                      Semina Web Event - BWA
                     </h3>
-                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                    <a href="https://github.com/AryasutaBaswara/frontend-semina">
+                      <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                    </a>
                   </div>
                   <img
-                    src="/nvidia.jpg"
-                    alt="Apple Website"
+                    src="/BWA-mern-web.jpg"
+                    alt="Semina Web"
                     className="w-full h-full object-cover"
                   />
                 </Card>
                 <Card className="flex flex-col items-start gap-4 border-4 bg-black">
                   <div className="flex items-center justify-between w-full px-4 ">
                     <h3 className="text-xl text-white font-bold ms-4 mt-4">
-                      Intel Website
+                      Lumina
                     </h3>
-                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                    <a href="https://github.com/AryasutaBaswara/Lumina">
+                      <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
+                    </a>
                   </div>
                   <img
-                    src="/intel.jpg"
-                    alt="Apple Website"
-                    className="w-full h-full object-cover"
-                  />
-                </Card>
-                <Card className="flex flex-col items-start gap-4 border-4 bg-black">
-                  <div className="flex items-center justify-between w-full px-4 ">
-                    <h3 className="text-xl text-white font-bold ms-4 mt-4">
-                      Amazon Website
-                    </h3>
-                    <FaGithub className="h-8 w-8 mt-4 me-4 hover:scale-110 hover:cursor-pointer" />
-                  </div>
-                  <img
-                    src="/amazon.jpg"
-                    alt="Apple Website"
+                    src="/Lumina-web.jpg"
+                    alt="Lumina"
                     className="w-full h-full object-cover"
                   />
                 </Card>
@@ -402,10 +395,22 @@ export default function Home() {
             <span className="text-orange-400">Contact</span> Me
           </h1>
           <div className="flex gap-[60px] items-center mt-6">
-            <FaInstagram className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
-            <FaWhatsapp className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
-            <BiLogoGmail className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
-            <FaLinkedin className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            <a href="https://www.instagram.com/baswaraarya/?hl=en">
+              <FaInstagram className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            </a>
+            <a
+              href="https://wa.me/6281249381133?text=Halo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            </a>
+            <a href="mailto:aryasutabsw@gmail.com">
+              <BiLogoGmail className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            </a>
+            <a href="https://www.linkedin.com/in/aryasuta-baswara-748a82385/">
+              <FaLinkedin className="h-15 w-15 cursor-pointer transition-transform duration-300 hover:scale-120 drop-shadow-[0_0_10px_#ffffff]" />
+            </a>
           </div>
         </div>
       </div>
