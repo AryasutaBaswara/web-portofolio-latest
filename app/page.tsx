@@ -140,9 +140,13 @@ export default function Home() {
                         className="px-6 py-3 rounded-[16px] transition-colors duration-300
                  group-hover:bg-orange-500/20 group-hover:cursor-pointer"
                       >
-                        <p className="transition-colors duration-300 group-hover:text-white">
+                        <a
+                          className="transition-colors duration-300 group-hover:text-white"
+                          href="/CV_AryasustaBaswara.pdf"
+                          download
+                        >
                           Download CV
-                        </p>
+                        </a>
                       </div>
                     </ElectricBorder>
                   </div>
@@ -158,9 +162,12 @@ export default function Home() {
                         className="px-6 py-3 rounded-[16px] transition-colors duration-300
                  group-hover:bg-cyan-500/20 group-hover:cursor-pointer"
                       >
-                        <p className="transition-colors duration-300 group-hover:text-white">
+                        <a
+                          className="transition-colors duration-300 group-hover:text-white"
+                          href="https://www.linkedin.com/in/aryasuta-baswara-748a82385/"
+                        >
                           Visit LinkedIn
-                        </p>
+                        </a>
                       </div>
                     </ElectricBorder>
                   </div>
