@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Lanyard from "./components/Lanyard/Lanyard";
 import RotatingText from "./components/RotatingText/RotatingText";
 import SplitText from "./components/SplitText/SplitText";
 import BlurText from "./components/BlurText/BlurText";
@@ -142,7 +141,7 @@ export default function Home() {
                       >
                         <a
                           className="transition-colors duration-300 group-hover:text-white"
-                          href="/CV_AryasustaBaswara.pdf"
+                          href="/CV_AryasutaBaswara.pdf"
                           download
                         >
                           Download CV
@@ -198,9 +197,7 @@ export default function Home() {
                       <h2 className="text-2xl font-bold text-orange-400 drop-shadow-lg">
                         Aryasuta Baswara
                       </h2>
-                      <p className="text-sm text-gray-300">
-                        Fullstack Developer
-                      </p>
+                      <p className="text-sm text-white">Fullstack Developer</p>
                     </div>
 
                     {/* Footer kecil */}
@@ -218,9 +215,12 @@ export default function Home() {
                           <p className="text-green-400 text-xs">Online</p>
                         </div>
                       </div>
-                      <button className="bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-3 py-1.5 rounded-lg transition">
+                      <a
+                        href="#footer"
+                        className="bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-3 py-1.5 rounded-lg transition"
+                      >
                         Contact Me
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -438,7 +438,10 @@ export default function Home() {
         </div>
       </div>
       <div className="absolute w-full mt-4"></div>
-      <div className="container mx-auto py-25 bg-transparent relative z-20">
+      <div
+        id="footer"
+        className="container mx-auto py-25 bg-transparent relative z-20"
+      >
         <div className="flex flex-col mt-6 gap-6 items-center justify-center ">
           <h1 className="text-6xl text-white font-bold text-center z-50">
             <span className="text-orange-400">Contact</span> Me
