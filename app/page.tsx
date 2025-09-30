@@ -175,8 +175,57 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-6">
-            <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+          <div className="col-span-6 flex justify-center items-center">
+            <div className="relative z-0 w-full h-screen flex justify-end items-center transform scale-100 origin-center">
+              <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-xl bg-gradient-to-r from-cyan-500/20 via-orange-400 to-cyan-500/20 p-1 transition-all duration-1000 hover:scale-110">
+                {/* Background Foto */}
+                <div className="relative rounded-2xl overflow-hidden ">
+                  <Image
+                    src="/profile.jpg" // ganti foto kamu
+                    alt="Profile"
+                    width={400}
+                    height={500}
+                    className="w-full h-full object-cover opacity-90"
+                  />
+
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+
+                  {/* Content di atas foto */}
+                  <div className="absolute inset-0 flex flex-col justify-between p-6">
+                    {/* Nama & Role */}
+                    <div>
+                      <h2 className="text-2xl font-bold text-orange-400 drop-shadow-lg">
+                        Aryasuta Baswara
+                      </h2>
+                      <p className="text-sm text-gray-300">
+                        Fullstack Developer
+                      </p>
+                    </div>
+
+                    {/* Footer kecil */}
+                    <div className="flex items-center justify-between bg-white/10 backdrop-blur-md rounded-xl px-4 py-2">
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src="/profile.jpg"
+                          alt="avatar"
+                          width={32}
+                          height={32}
+                          className="rounded-full"
+                        />
+                        <div className="text-sm">
+                          <p className="text-white">@aryasuta</p>
+                          <p className="text-green-400 text-xs">Online</p>
+                        </div>
+                      </div>
+                      <button className="bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-3 py-1.5 rounded-lg transition">
+                        Contact Me
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
